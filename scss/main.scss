@@ -404,3 +404,53 @@ $backgroundColor: #F2F2F2;
         }
     } 
 }
+
+@media #{$mediumScreen}
+{
+    /* Page d'accueil */
+
+    /* SECTION 2 */
+    .operation {
+        text-align: center;
+        &__steps {
+           justify-content: center;
+           font-size: 1.1em;
+           h3 {
+             i {
+                margin-left: 0;
+             }
+           }  
+        }
+    }
+
+    /* SECTION 3 */
+    .restaurants {
+        display: flex; 
+        flex-wrap: wrap;
+        justify-content: center;
+        h2 {
+            margin-right: 450px;
+            margin-left: 450px;
+        }
+        .thumbnails {
+            width: 42%;
+        }
+    }
+
+    /* PAGES MENUS */
+
+    #backgroundMenu1, #backgroundMenu2, #backgroundMenu3, #backgroundMenu4{
+        background-size: 100% 500px;
+    }
+
+    /* SECTION 1 */
+    .containerMenu {
+        margin-top: 400px;
+    }
+    .thumbnailsMenu {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
