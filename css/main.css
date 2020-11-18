@@ -1,4 +1,14 @@
 /* VARIABLES */
+@keyframes appearanceThumbnails {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /* GENERAL */
 body {
   width: 100%;
@@ -68,8 +78,14 @@ header i {
   background: linear-gradient(#FF79DA, #9356DC);
   color: white;
   box-shadow: 5px 5px 5px #d9d9d9;
+  transition-property: opacity, box-shadow;
+  transition-duration: 1s, 1s;
   padding: 15px 20px;
   margin: 30px auto;
+}
+.containerLoc__explore button:hover {
+  opacity: 0.8;
+  box-shadow: 7px 7px 7px #a6a6a6;
 }
 
 /* SECTION 2 */
@@ -163,6 +179,26 @@ header i {
   right: 15px;
   bottom: 20px;
   font-size: 1.6em;
+  opacity: 1;
+}
+.thumbnails__text__icon:hover {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.thumbnails__text__icon2 {
+  position: absolute;
+  right: 15px;
+  bottom: 20px;
+  font-size: 1.6em;
+  opacity: 0;
+  background: #9356DC;
+  background: linear-gradient(to bottom, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.thumbnails__text__icon2:hover {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
 }
 
 /* FOOTER */
@@ -272,8 +308,14 @@ footer a .fa-utensils {
   background: linear-gradient(#FF79DA, #9356DC);
   color: white;
   box-shadow: 5px 5px 5px #d9d9d9;
+  transition-property: opacity, box-shadow;
+  transition-duration: 1s, 1s;
   padding: 15px 50px;
   margin: 50px auto;
+}
+.containerMenu button:hover {
+  opacity: 0.8;
+  box-shadow: 7px 7px 7px #a6a6a6;
 }
 
 .thumbnailsMenu {
@@ -284,6 +326,8 @@ footer a .fa-utensils {
   box-shadow: 5px 5px 5px #d9d9d9;
   display: flex;
   justify-content: space-between;
+  opacity: 0;
+  animation: appearanceThumbnails 1s 500ms both;
 }
 .thumbnailsMenu__title {
   width: 80%;
@@ -332,6 +376,13 @@ footer a .fa-utensils {
     background: linear-gradient(#FF79DA, #9356DC);
     color: white;
     box-shadow: 7px 7px 7px #d9d9d9;
+    cursor: pointer;
+    transition-property: opacity, box-shadow;
+    transition-duration: 500ms, 500ms;
+  }
+  .containerLoc__explore button:hover {
+    opacity: 0.8;
+    box-shadow: 7px 7px 7px #a6a6a6;
   }
 
   /* SECTION 2 */
@@ -388,6 +439,13 @@ footer a .fa-utensils {
     background: linear-gradient(#FF79DA, #9356DC);
     color: white;
     box-shadow: 7px 7px 7px #d9d9d9;
+    cursor: pointer;
+    transition-property: opacity, box-shadow;
+    transition-duration: 500ms, 500ms;
+  }
+  .containerMenu button:hover {
+    opacity: 0.8;
+    box-shadow: 7px 7px 7px #a6a6a6;
   }
 }
 @media all and (min-width: 481px) and (max-width: 1169px) {

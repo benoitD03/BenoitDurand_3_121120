@@ -6,6 +6,7 @@ $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 $backgroundColor: #F2F2F2;
+$buttonColor: linear-gradient($secondary-color, $primary-color);
 
 @mixin buttonStyleSmall {
     display: block;
@@ -15,6 +16,12 @@ $backgroundColor: #F2F2F2;
     background: linear-gradient($secondary-color, $primary-color);
     color: white;
     box-shadow: 5px 5px 5px darken($backgroundColor, 10);
+    transition-property: opacity, box-shadow;
+    transition-duration: 1s, 1s;
+        &:hover {
+            opacity: 0.8;
+            box-shadow: 7px 7px 7px darken($backgroundColor, 30);
+        }
 }
 @mixin buttonStyleLarge {
     display: block;
@@ -24,7 +31,13 @@ $backgroundColor: #F2F2F2;
     background: linear-gradient($secondary-color, $primary-color);
     color: white;
     box-shadow: 7px 7px 7px darken($backgroundColor, 10);
-
+    cursor: pointer;
+    transition-property: opacity, box-shadow;
+    transition-duration: 500ms, 500ms;
+        &:hover {
+            opacity: 0.8;
+            box-shadow: 7px 7px 7px darken($backgroundColor, 30);
+        }
 }
 @mixin backgroundMenu {
     width: 100%;
@@ -32,6 +45,18 @@ $backgroundColor: #F2F2F2;
     background-size: 100% 270px;
     background-repeat: no-repeat;
     background-position-y: 65px; 
+}
+
+@keyframes appearanceThumbnails {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
@@ -199,6 +224,26 @@ $backgroundColor: #F2F2F2;
                 right: 15px;
                 bottom: 20px;
                 font-size: 1.6em;
+                opacity: 1;
+                &:hover {
+                      opacity: 0;
+                      transition: opacity 1s;
+                }   
+            }
+            &__icon2 {
+                position: absolute;
+                right: 15px;
+                bottom: 20px;
+                font-size: 1.6em;
+                opacity: 0;
+                background: $primary-color; 
+                background: linear-gradient(to bottom, $primary-color, $secondary-color);  
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                &:hover {
+                      opacity: 1;
+                      transition: opacity 1s ease-in-out;
+                } 
             }
         }
     }
@@ -301,6 +346,8 @@ $backgroundColor: #F2F2F2;
         box-shadow: 5px 5px 5px darken($backgroundColor, 10);
         display: flex;
         justify-content: space-between;
+        opacity: 0;
+        animation: appearanceThumbnails 1s 500ms both;
         &__title {
             width: 80%;
             h3 {
