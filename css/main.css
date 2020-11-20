@@ -366,6 +366,7 @@ footer a .fa-utensils {
 }
 .thumbnailsMenu__title {
   width: 80%;
+  min-width: 0;
 }
 .thumbnailsMenu__title h3 {
   margin: 10px 0 5px 10px;
@@ -384,13 +385,13 @@ footer a .fa-utensils {
 }
 .thumbnailsMenu__price {
   font-size: 0.9em;
-  margin: 20px 20px 0 0;
+  margin: 20px 20px 0 15px;
   justify-content: flex-end;
 }
 .thumbnailsMenu__check {
   width: 0;
   opacity: 0;
-  transition: width 1s linear;
+  transition: width 500ms linear;
   transform-origin: right;
   background-color: #99E2D0;
   color: white;
@@ -405,7 +406,7 @@ footer a .fa-utensils {
   opacity: 1;
 }
 .thumbnailsMenu:hover .thumbnailsMenu__check > .fa-check-circle {
-  animation: checkRotation 1s linear;
+  animation: checkRotation 500ms linear;
 }
 
 /* MEDIA QUERIES */
