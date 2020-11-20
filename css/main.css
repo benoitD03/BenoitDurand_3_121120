@@ -9,6 +9,14 @@
     transform: translateY(0);
   }
 }
+@keyframes appearanceHomePage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @keyframes checkRotation {
   from {
     transform: rotate(0);
@@ -34,6 +42,11 @@ a {
 }
 a:visited {
   color: black;
+}
+
+#homePage {
+  opacity: 0;
+  animation: appearanceHomePage 100ms 2050ms both;
 }
 
 /* HEADER */
@@ -377,7 +390,7 @@ footer a .fa-utensils {
 .thumbnailsMenu__check {
   width: 0;
   opacity: 0;
-  transition: width 2s linear;
+  transition: width 1s linear;
   transform-origin: right;
   background-color: #99E2D0;
   color: white;
@@ -392,7 +405,7 @@ footer a .fa-utensils {
   opacity: 1;
 }
 .thumbnailsMenu:hover .thumbnailsMenu__check > .fa-check-circle {
-  animation: checkRotation 2s linear;
+  animation: checkRotation 1s linear;
 }
 
 /* MEDIA QUERIES */
@@ -539,6 +552,35 @@ footer a .fa-utensils {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+/* LOADER */
+.loader {
+  opacity: 0;
+  border-top: 10px solid #9356DC;
+  border-bottom: 10px solid #FF79DA;
+  border-left: 10px solid #99E2D0;
+  border-right: 10px solid #99E2D0;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: loadingSpinner 2s linear;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@keyframes loadingSpinner {
+  from {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(360deg);
   }
 }
 

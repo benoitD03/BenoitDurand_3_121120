@@ -58,7 +58,14 @@ $buttonColor: linear-gradient($secondary-color, $primary-color);
         transform: translateY(0);
     }
 }
-
+@keyframes appearanceHomePage {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 @keyframes checkRotation {
     from {
         transform: rotate(0);
@@ -86,7 +93,10 @@ $buttonColor: linear-gradient($secondary-color, $primary-color);
             color: black;
         }
     }
-    
+    #homePage {
+        opacity: 0;
+        animation: appearanceHomePage 100ms 2050ms both;
+    }
 
     /* HEADER */
     header{
@@ -403,7 +413,7 @@ $buttonColor: linear-gradient($secondary-color, $primary-color);
         &__check {
             width: 0;
             opacity: 0;
-            transition: width 2s linear;
+            transition: width 1s linear;
             transform-origin: right;
             background-color: $tertiary-color;
             color: white;
@@ -418,7 +428,7 @@ $buttonColor: linear-gradient($secondary-color, $primary-color);
             width: 70px;
             opacity: 1;
             > .fa-check-circle {
-                animation: checkRotation 2s linear;
+                animation: checkRotation 1s linear;
               }
         }
     }
@@ -556,5 +566,33 @@ $buttonColor: linear-gradient($secondary-color, $primary-color);
         margin-left: auto;
         margin-right: auto;
     }
+}
 
+/* LOADER */
+.loader {
+    opacity: 0;
+    border-top: 10px solid $primary-color;
+    border-bottom: 10px solid $secondary-color;
+    border-left: 10px solid $tertiary-color;
+    border-right: 10px solid $tertiary-color;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: loadingSpinner 2s linear;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+@keyframes loadingSpinner {
+    from {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(360deg);
+    }
 }
