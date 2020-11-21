@@ -20,13 +20,14 @@
 @keyframes checkRotation {
   from {
     transform: rotate(0);
-    opacity: 0;
+    opacity: 1;
   }
   50% {
     opacity: 1;
   }
   to {
     transform: rotate(360deg);
+    opacity: 1;
   }
 }
 /* GENERAL */
@@ -217,7 +218,7 @@ header i {
   font-size: 1.6em;
   opacity: 0;
   background: #9356DC;
-  background: linear-gradient(to bottom, #9356DC, #FF79DA);
+  background: linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -325,6 +326,9 @@ footer a .fa-utensils {
   border-bottom: 3px solid #99E2D0;
   width: 40px;
 }
+.containerMenu--entrees {
+  flex-wrap: wrap;
+}
 .containerMenu--entrees .thumbnailsMenu {
   animation: appearanceThumbnails 1s 250ms both;
 }
@@ -390,23 +394,21 @@ footer a .fa-utensils {
 }
 .thumbnailsMenu__check {
   width: 0;
-  opacity: 0;
   transition: width 500ms linear;
-  transform-origin: right;
   background-color: #99E2D0;
   color: white;
   border-radius: 0 15px 15px 0;
 }
-.thumbnailsMenu__check i {
+.thumbnailsMenu__check .fa-check-circle {
   padding: 25px;
   font-size: 1.3em;
+  opacity: 0;
 }
 .thumbnailsMenu:hover .thumbnailsMenu__check {
   width: 70px;
-  opacity: 1;
 }
 .thumbnailsMenu:hover .thumbnailsMenu__check > .fa-check-circle {
-  animation: checkRotation 500ms linear;
+  animation: checkRotation 500ms linear both;
 }
 
 /* MEDIA QUERIES */
