@@ -20,14 +20,9 @@
 @keyframes checkRotation {
   from {
     transform: rotate(0);
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
   }
   to {
     transform: rotate(360deg);
-    opacity: 1;
   }
 }
 /* GENERAL */
@@ -357,7 +352,6 @@ footer a .fa-utensils {
 }
 
 .thumbnailsMenu {
-  position: relative;
   width: 90%;
   margin: 20px;
   background-color: white;
@@ -398,14 +392,14 @@ footer a .fa-utensils {
   background-color: #99E2D0;
   color: white;
   border-radius: 0 15px 15px 0;
+  overflow: hidden;
 }
 .thumbnailsMenu__check .fa-check-circle {
   padding: 25px;
-  font-size: 1.3em;
-  opacity: 0;
+  font-size: 1.5em;
 }
 .thumbnailsMenu:hover .thumbnailsMenu__check {
-  width: 70px;
+  width: 90px;
 }
 .thumbnailsMenu:hover .thumbnailsMenu__check > .fa-check-circle {
   animation: checkRotation 500ms linear both;

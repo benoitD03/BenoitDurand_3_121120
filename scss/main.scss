@@ -69,14 +69,9 @@ $buttonColor: linear-gradient($secondary-color, $primary-color);
 @keyframes checkRotation {
     from {
         transform: rotate(0);
-        opacity: 1;
-    }
-    50% {
-        opacity: 1;
     }
     to {
         transform: rotate(360deg);
-        opacity: 1;
     }
 }
 
@@ -379,7 +374,7 @@ $buttonColor: linear-gradient($secondary-color, $primary-color);
         }
     }
     .thumbnailsMenu{
-        position: relative;
+        // position: relative;
         width: 90%;
         margin: 20px;
         background-color: white;
@@ -419,15 +414,15 @@ $buttonColor: linear-gradient($secondary-color, $primary-color);
             background-color: $tertiary-color;
             color: white;
             border-radius: 0 15px 15px 0;
+            overflow: hidden;
             .fa-check-circle {
                 padding: 25px;
-                font-size: 1.3em;
-                opacity: 0;
+                font-size: 1.5em;
             }
         }
        
         &:hover  .thumbnailsMenu__check {
-            width: 70px;
+            width: 90px;
             > .fa-check-circle {
                 animation: checkRotation 500ms linear both;
               }
