@@ -63,11 +63,10 @@ header i {
 
 /* SECTION 1*/
 .containerLoc__localisation {
-  margin-right: 0;
   display: flex;
   justify-content: center;
-  background-color: #e9e9e9;
-  box-shadow: 2px 2px 2px #c3c3c3 inset;
+  background-color: #eaeaea;
+  box-shadow: 2px 2px 2px #c4c4c4 inset;
 }
 .containerLoc__localisation i {
   padding: 15px 17px 15px 0;
@@ -77,12 +76,12 @@ header i {
   font-weight: 400;
 }
 .containerLoc__explore {
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   height: 260px;
 }
 .containerLoc__explore h1 {
   text-align: center;
-  padding: 20px 20px 10px 20px;
+  padding: 35px 20px 10px 20px;
   margin: 0px 30px 5px 30px;
 }
 .containerLoc__explore p {
@@ -98,30 +97,31 @@ header i {
   font-size: 0.95em;
   background: linear-gradient(#FF79DA, #9356DC);
   color: white;
-  box-shadow: 5px 5px 5px #d9d9d9;
+  box-shadow: 5px 5px 5px #dddddd;
   transition-property: opacity, box-shadow;
   transition-duration: 1s, 1s;
-  padding: 15px 20px;
+  padding: 20px 20px;
   margin: 30px auto;
 }
 .containerLoc__explore button:hover {
   opacity: 0.8;
-  box-shadow: 7px 7px 7px #a6a6a6;
+  box-shadow: 7px 7px 7px #aaaaaa;
 }
 
 /* SECTION 2 */
 .operation h2 {
-  margin: 50px 20px 20px 20px;
+  margin: 70px 20px 20px 20px;
 }
 .operation__steps {
   position: relative;
   height: 70px;
   display: flex;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   margin: 20px;
+  padding-top: 10px;
   border-radius: 20px;
   align-items: center;
-  box-shadow: 5px 5px 5px #d9d9d9;
+  box-shadow: 5px 5px 5px #dddddd;
 }
 .operation__steps .number {
   position: absolute;
@@ -144,10 +144,16 @@ header i {
   font-size: 1.2em;
   color: gray;
 }
+.operation__steps:nth-child(4) {
+  background-color: #F5EDFF;
+}
+.operation__steps:nth-child(4) i {
+  color: #9356DC;
+}
 
 /* SECTION 3 */
 .restaurants {
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   margin-top: 70px;
   padding-bottom: 40px;
 }
@@ -159,9 +165,10 @@ header i {
   width: 90%;
   height: 245px;
   margin: 20px;
+  padding-bottom: 10px;
   background-color: white;
   border-radius: 20px;
-  box-shadow: 5px 5px 5px #d9d9d9;
+  box-shadow: 5px 5px 5px #dddddd;
 }
 .thumbnails__image {
   position: relative;
@@ -224,7 +231,7 @@ header i {
 
 /* FOOTER */
 footer {
-  background-color: #3B3B43;
+  background-color: #363636;
   padding-bottom: 30px;
 }
 footer img {
@@ -261,7 +268,7 @@ footer a .fa-utensils {
   background-size: 100% 270px;
   background-repeat: no-repeat;
   background-position-y: 65px;
-  background-image: url("../images/restaurants/jay-wennington-N_Y88TmGwA-unsplash.jpg");
+  background-image: url("../images/restaurants/la_palette_du_gout.jpg");
 }
 
 #backgroundMenu2 {
@@ -270,8 +277,7 @@ footer a .fa-utensils {
   background-size: 100% 270px;
   background-repeat: no-repeat;
   background-position-y: 65px;
-  background-size: cover;
-  background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unspash.jpg");
+  background-image: url("../images/restaurants/la_note_enchantee.jpg");
 }
 
 #backgroundMenu3 {
@@ -280,7 +286,7 @@ footer a .fa-utensils {
   background-size: 100% 270px;
   background-repeat: no-repeat;
   background-position-y: 65px;
-  background-image: url("../images/restaurants/to-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-image: url("../images/restaurants/a_la_francaise.jpg");
 }
 
 #backgroundMenu4 {
@@ -289,13 +295,13 @@ footer a .fa-utensils {
   background-size: 100% 270px;
   background-repeat: no-repeat;
   background-position-y: 65px;
-  background-image: url("../images/restaurants/louis-hansel-shotsofluis-qNBGVyOCY8Q-unsplash.jpg");
+  background-image: url("../images/restaurants/le_delice_des_sens.jpg");
 }
 
 /* SECTION 1 */
 .containerMenu {
   border-radius: 40px 40px 0 0;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   padding-bottom: 20px;
   margin-top: 220px;
 }
@@ -340,7 +346,7 @@ footer a .fa-utensils {
   font-size: 0.95em;
   background: linear-gradient(#FF79DA, #9356DC);
   color: white;
-  box-shadow: 5px 5px 5px #d9d9d9;
+  box-shadow: 5px 5px 5px #dddddd;
   transition-property: opacity, box-shadow;
   transition-duration: 1s, 1s;
   padding: 15px 50px;
@@ -348,7 +354,7 @@ footer a .fa-utensils {
 }
 .containerMenu button:hover {
   opacity: 0.8;
-  box-shadow: 7px 7px 7px #a6a6a6;
+  box-shadow: 7px 7px 7px #aaaaaa;
 }
 
 .thumbnailsMenu {
@@ -356,7 +362,7 @@ footer a .fa-utensils {
   margin: 20px;
   background-color: white;
   border-radius: 15px;
-  box-shadow: 5px 5px 5px #d9d9d9;
+  box-shadow: 5px 5px 5px #dddddd;
   display: flex;
   justify-content: space-between;
   opacity: 0;
@@ -434,14 +440,14 @@ footer a .fa-utensils {
     font-size: 1.2em;
     background: linear-gradient(#FF79DA, #9356DC);
     color: white;
-    box-shadow: 7px 7px 7px #d9d9d9;
+    box-shadow: 7px 7px 7px #dddddd;
     cursor: pointer;
     transition-property: opacity, box-shadow;
     transition-duration: 500ms, 500ms;
   }
   .containerLoc__explore button:hover {
     opacity: 0.8;
-    box-shadow: 7px 7px 7px #a6a6a6;
+    box-shadow: 7px 7px 7px #aaaaaa;
   }
 
   /* SECTION 2 */
@@ -497,14 +503,18 @@ footer a .fa-utensils {
     font-size: 1.2em;
     background: linear-gradient(#FF79DA, #9356DC);
     color: white;
-    box-shadow: 7px 7px 7px #d9d9d9;
+    box-shadow: 7px 7px 7px #dddddd;
     cursor: pointer;
     transition-property: opacity, box-shadow;
     transition-duration: 500ms, 500ms;
   }
   .containerMenu button:hover {
     opacity: 0.8;
-    box-shadow: 7px 7px 7px #a6a6a6;
+    box-shadow: 7px 7px 7px #aaaaaa;
+  }
+
+  .containerMenu--entrees .thumbnailsMenu:nth-child(5) {
+    margin-left: 140px;
   }
 }
 @media all and (min-width: 481px) and (max-width: 1169px) {
