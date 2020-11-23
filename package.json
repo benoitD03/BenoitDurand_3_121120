@@ -1,0 +1,21 @@
+{
+  "name": "benoitdurand_3_121120",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./scss/main.scss:./css/main.css",
+    "prefix": "postcss ./css/main.css --use autoprefixer -d ./css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benoitD03/BenoitDurand_3_121120.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/benoitD03/BenoitDurand_3_121120/issues"
+  },
+  "homepage": "https://github.com/benoitD03/BenoitDurand_3_121120#readme"
+}
