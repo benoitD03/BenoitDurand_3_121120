@@ -149,7 +149,7 @@ box-shadow: 5px 5px 5px darken($backgroundColor, 10);
             font-size: 1.05em;
         }
     }
-    &__icon {
+    &__icon i{
         position: absolute;
         right: 15px;
         bottom: 20px;
@@ -160,7 +160,7 @@ box-shadow: 5px 5px 5px darken($backgroundColor, 10);
                 transition: opacity 1s;
         }   
     }
-    &__icon2 {
+    &__icon2 i{
         position: absolute;
         right: 15px;
         bottom: 20px;
@@ -169,6 +169,7 @@ box-shadow: 5px 5px 5px darken($backgroundColor, 10);
         background: $primary-color; 
         background: linear-gradient($primary-color, $secondary-color);  
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         &:hover {
                 opacity: 1;

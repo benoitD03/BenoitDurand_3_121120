@@ -264,18 +264,18 @@ a:visited {
   font-weight: 300;
   font-size: 1.05em;
 }
-.thumbnails__text__icon {
+.thumbnails__text__icon i {
   position: absolute;
   right: 15px;
   bottom: 20px;
   font-size: 1.6em;
   opacity: 1;
 }
-.thumbnails__text__icon:hover {
+.thumbnails__text__icon i:hover {
   opacity: 0;
   transition: opacity 1s;
 }
-.thumbnails__text__icon2 {
+.thumbnails__text__icon2 i {
   position: absolute;
   right: 15px;
   bottom: 20px;
@@ -284,9 +284,10 @@ a:visited {
   background: #9356DC;
   background: linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.thumbnails__text__icon2:hover {
+.thumbnails__text__icon2 i:hover {
   opacity: 1;
   transition: opacity 1s ease-in-out;
 }
