@@ -1,0 +1,255 @@
+/* GENERAL */
+body {
+width: 100%;
+margin-left: 0;
+font-family: 'Roboto', sans-serif;
+}
+a {
+text-decoration: none;
+color: black;
+&:visited {
+    color: black;
+}
+}
+#homePage {
+opacity: 0;
+animation: appearanceHomePage 100ms 2050ms both;
+}
+
+/* SECTION 1*/
+.containerLoc {
+&__localisation {
+    display: flex;
+    justify-content: center;
+    background-color: #eaeaea;
+    box-shadow: 2px 2px 2px darken( #eaeaea, 15) inset;
+    i{
+        padding: 15px 17px 15px 0;
+    }
+    p{
+        margin-right: 10px;
+        font-weight: 400;
+    }
+}
+&__explore {
+    background-color: $backgroundColor;
+    height: 260px;
+    h1 {
+        text-align: center;
+        padding: 35px 20px 10px 20px;
+        margin: 0px 30px 5px 30px;
+    }
+    p {
+        font-weight: 100;
+        font-size: 1.1em;
+        text-align: center;
+        margin-top: 0;
+    }
+    button {
+        @include buttonStyleSmall();
+        padding: 20px 20px;
+        margin: 30px auto;
+    }
+}
+}
+
+
+/* SECTION 2 */
+.operation {
+h2 {
+    margin: 70px 20px 20px 20px;
+}
+&__steps {
+    position: relative;
+    height: 70px;
+    display: flex;
+    background-color: $backgroundColor;
+    margin: 20px;
+    padding-top: 10px;
+    border-radius: 20px;
+    align-items: center;
+    box-shadow: 5px 5px 5px darken($backgroundColor, 10);
+    .number {
+        position: absolute;
+        top: 24px;
+        left: -8px;
+        height: 15px;
+        padding: 5px 9px;
+        background-color: $primary-color;
+        color: white;
+        font-size: 0.75em;
+        border-radius: 25px;
+    }
+    h3 {
+        font-weight: 400;
+        font-size: 1em;
+        i {
+            margin-left: 40px;
+            padding-right: 25px;
+            font-size: 1.2em;
+            color: gray;
+        }
+    }
+}
+&__steps:nth-child(4) {
+    background-color: #F5EDFF;
+    i {
+        color: $primary-color;
+    }
+}
+}
+
+
+/* SECTION 3 */
+.restaurants {
+background-color: $backgroundColor;
+margin-top: 70px;
+padding-bottom: 40px;
+h2 {
+    padding: 50px 20px 0 20px;
+}
+}
+.thumbnails {
+width: 90%;
+height: 245px;
+margin: 20px;
+background-color: white;
+border-radius: 20px;
+box-shadow: 5px 5px 5px darken($backgroundColor, 10);
+&__image {
+    position: relative;
+    img{
+        width: 100%;
+        height: 170px;
+        border-radius: 20px 20px 0 0;
+        object-fit: cover;
+    }
+    .new {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background-color: $tertiary-color;
+        color: darken($tertiary-color, 35);
+        padding: 5px 12px;
+        font-size: 0.9em;
+        border-radius: 3px;
+    } 
+}
+&__text {
+    display: flex;
+    position: relative;
+    &__title {
+        h3 {
+            margin: 10px 0 0 15px;
+            font-size: 1.1em;
+        }
+        p {
+            margin: 5px 0 10px 15px;
+            font-weight: 300;
+            font-size: 1.05em;
+        }
+    }
+    &__icon {
+        position: absolute;
+        right: 15px;
+        bottom: 20px;
+        font-size: 1.6em;
+        opacity: 1;
+        &:hover {
+                opacity: 0;
+                transition: opacity 1s;
+        }   
+    }
+    &__icon2 {
+        position: absolute;
+        right: 15px;
+        bottom: 20px;
+        font-size: 1.6em;
+        opacity: 0;
+        background: $primary-color; 
+        background: linear-gradient($primary-color, $secondary-color);  
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        &:hover {
+                opacity: 1;
+                transition: opacity 1s ease-in-out;
+        } 
+    }
+}
+}
+
+/* MEDIA QUERIES */
+
+@media #{$largeScreen}
+{
+    /* SECTION 1 */
+    .containerLoc {
+        &__localisation {
+            font-size: 1.2em;
+            i {
+                padding-top: 20px;
+            }
+        }
+        &__explore {
+            h1 {
+                font-size: 1.9em;
+            }
+            p {
+                font-size: 1.5em;
+                font-weight: 300;
+            }
+            button {
+                @include buttonStyleLarge();
+            }
+        }
+    }
+
+    /* SECTION 2 */
+    .operation {
+        display: flex;
+        &__steps {
+            width: 25%;
+            margin-top: 30px;
+            font-size: 1.1em;
+        }
+    }
+
+    /* SECTION 3 */
+    .restaurants {
+        display: flex; 
+        .thumbnails {
+            width: 25%;
+        }
+    }
+}
+
+@media #{$mediumScreen}
+{
+    /* SECTION 2 */
+    .operation {
+        text-align: center;
+        &__steps {
+           justify-content: center;
+           font-size: 1.1em;
+           h3 {
+             i {
+                margin-left: 0;
+             }
+           }  
+        }
+    }
+
+    /* SECTION 3 */
+    .restaurants {
+        display: flex; 
+        flex-wrap: wrap;
+        justify-content: center;
+        h2 {
+            margin-right: 450px;
+            margin-left: 450px;
+        }
+        .thumbnails {
+            width: 42%;
+        }
+    }
+}

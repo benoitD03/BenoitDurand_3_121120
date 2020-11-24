@@ -25,6 +25,85 @@
     transform: rotate(360deg);
   }
 }
+@keyframes loadingSpinner {
+  from {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+.loader {
+  opacity: 0;
+  border-top: 10px solid #9356DC;
+  border-bottom: 10px solid #FF79DA;
+  border-left: 10px solid #99E2D0;
+  border-right: 10px solid #99E2D0;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: loadingSpinner 2s linear;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+header {
+  text-align: center;
+  position: relative;
+}
+header img {
+  width: 180px;
+  margin: 12px 0;
+}
+header i {
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  font-size: 1.2em;
+}
+
+/* MEDIA QUERIES */
+@media all and (min-width : 1170px) {
+  header img {
+    width: 220px;
+  }
+}
+footer {
+  background-color: #363636;
+  padding-bottom: 30px;
+}
+footer img {
+  width: 100px;
+  margin: 20px 0 15px 20px;
+  filter: invert(100%);
+}
+footer ul {
+  margin: 0;
+  padding-left: 20px;
+  list-style-type: none;
+}
+footer ul li {
+  margin-bottom: 8px;
+}
+footer a {
+  color: white !important;
+  font-weight: 300;
+  font-size: 0.9em;
+}
+footer a i {
+  margin-right: 10px;
+  font-size: 0.75em;
+}
+footer a .fa-utensils {
+  font-size: 1em;
+}
+
 /* GENERAL */
 body {
   width: 100%;
@@ -43,22 +122,6 @@ a:visited {
 #homePage {
   opacity: 0;
   animation: appearanceHomePage 100ms 2050ms both;
-}
-
-/* HEADER */
-header {
-  text-align: center;
-  position: relative;
-}
-header img {
-  width: 180px;
-  margin: 12px 0;
-}
-header i {
-  position: absolute;
-  top: 15px;
-  left: 25px;
-  font-size: 1.2em;
 }
 
 /* SECTION 1*/
@@ -165,7 +228,6 @@ header i {
   width: 90%;
   height: 245px;
   margin: 20px;
-  padding-bottom: 10px;
   background-color: white;
   border-radius: 20px;
   box-shadow: 5px 5px 5px #dddddd;
@@ -229,38 +291,84 @@ header i {
   transition: opacity 1s ease-in-out;
 }
 
-/* FOOTER */
-footer {
-  background-color: #363636;
-  padding-bottom: 30px;
-}
-footer img {
-  width: 100px;
-  margin: 20px 0 15px 20px;
-  filter: invert(100%);
-}
-footer ul {
-  margin: 0;
-  padding-left: 20px;
-  list-style-type: none;
-}
-footer ul li {
-  margin-bottom: 8px;
-}
-footer a {
-  color: white !important;
-  font-weight: 300;
-  font-size: 0.9em;
-}
-footer a i {
-  margin-right: 10px;
-  font-size: 0.75em;
-}
-footer a .fa-utensils {
-  font-size: 1em;
-}
+/* MEDIA QUERIES */
+@media all and (min-width : 1170px) {
+  /* SECTION 1 */
+  .containerLoc__localisation {
+    font-size: 1.2em;
+  }
+  .containerLoc__localisation i {
+    padding-top: 20px;
+  }
+  .containerLoc__explore h1 {
+    font-size: 1.9em;
+  }
+  .containerLoc__explore p {
+    font-size: 1.5em;
+    font-weight: 300;
+  }
+  .containerLoc__explore button {
+    display: block;
+    border: none;
+    border-radius: 40px;
+    font-size: 1.2em;
+    background: linear-gradient(#FF79DA, #9356DC);
+    color: white;
+    box-shadow: 7px 7px 7px #dddddd;
+    cursor: pointer;
+    transition-property: opacity, box-shadow;
+    transition-duration: 500ms, 500ms;
+  }
+  .containerLoc__explore button:hover {
+    opacity: 0.8;
+    box-shadow: 7px 7px 7px #aaaaaa;
+  }
 
-/* PAGES MENUS */
+  /* SECTION 2 */
+  .operation {
+    display: flex;
+  }
+  .operation__steps {
+    width: 25%;
+    margin-top: 30px;
+    font-size: 1.1em;
+  }
+
+  /* SECTION 3 */
+  .restaurants {
+    display: flex;
+  }
+  .restaurants .thumbnails {
+    width: 25%;
+  }
+}
+@media all and (min-width: 481px) and (max-width: 1169px) {
+  /* SECTION 2 */
+  .operation {
+    text-align: center;
+  }
+  .operation__steps {
+    justify-content: center;
+    font-size: 1.1em;
+  }
+  .operation__steps h3 i {
+    margin-left: 0;
+  }
+
+  /* SECTION 3 */
+  .restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .restaurants h2 {
+    margin-right: 450px;
+    margin-left: 450px;
+  }
+  .restaurants .thumbnails {
+    width: 42%;
+  }
+}
 /* GENERAL */
 #backgroundMenu1 {
   width: 100%;
@@ -295,7 +403,6 @@ footer a .fa-utensils {
   background-size: 100% 270px;
   background-repeat: no-repeat;
   background-position-y: 65px;
-  background-image: url("../images/restaurants/le_delice_des_sens.jpg");
 }
 
 /* SECTION 1 */
@@ -413,62 +520,6 @@ footer a .fa-utensils {
 
 /* MEDIA QUERIES */
 @media all and (min-width : 1170px) {
-  /* Page d'accueil */
-  /* HEADER */
-  header img {
-    width: 220px;
-  }
-
-  /* SECTION 1 */
-  .containerLoc__localisation {
-    font-size: 1.2em;
-  }
-  .containerLoc__localisation i {
-    padding-top: 20px;
-  }
-  .containerLoc__explore h1 {
-    font-size: 1.9em;
-  }
-  .containerLoc__explore p {
-    font-size: 1.5em;
-    font-weight: 300;
-  }
-  .containerLoc__explore button {
-    display: block;
-    border: none;
-    border-radius: 40px;
-    font-size: 1.2em;
-    background: linear-gradient(#FF79DA, #9356DC);
-    color: white;
-    box-shadow: 7px 7px 7px #dddddd;
-    cursor: pointer;
-    transition-property: opacity, box-shadow;
-    transition-duration: 500ms, 500ms;
-  }
-  .containerLoc__explore button:hover {
-    opacity: 0.8;
-    box-shadow: 7px 7px 7px #aaaaaa;
-  }
-
-  /* SECTION 2 */
-  .operation {
-    display: flex;
-  }
-  .operation__steps {
-    width: 25%;
-    margin-top: 30px;
-    font-size: 1.1em;
-  }
-
-  /* SECTION 3 */
-  .restaurants {
-    display: flex;
-  }
-  .restaurants .thumbnails {
-    width: 25%;
-  }
-
-  /* PAGES MENU */
   #backgroundMenu1, #backgroundMenu2, #backgroundMenu3, #backgroundMenu4 {
     background-size: 100% 1000px;
   }
@@ -518,34 +569,6 @@ footer a .fa-utensils {
   }
 }
 @media all and (min-width: 481px) and (max-width: 1169px) {
-  /* Page d'accueil */
-  /* SECTION 2 */
-  .operation {
-    text-align: center;
-  }
-  .operation__steps {
-    justify-content: center;
-    font-size: 1.1em;
-  }
-  .operation__steps h3 i {
-    margin-left: 0;
-  }
-
-  /* SECTION 3 */
-  .restaurants {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .restaurants h2 {
-    margin-right: 450px;
-    margin-left: 450px;
-  }
-  .restaurants .thumbnails {
-    width: 42%;
-  }
-
-  /* PAGES MENUS */
   #backgroundMenu1, #backgroundMenu2, #backgroundMenu3, #backgroundMenu4 {
     background-size: 100% 500px;
   }
@@ -559,35 +582,6 @@ footer a .fa-utensils {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
-  }
-}
-/* LOADER */
-.loader {
-  opacity: 0;
-  border-top: 10px solid #9356DC;
-  border-bottom: 10px solid #FF79DA;
-  border-left: 10px solid #99E2D0;
-  border-right: 10px solid #99E2D0;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  animation: loadingSpinner 2s linear;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-@keyframes loadingSpinner {
-  from {
-    opacity: 1;
-    transform: rotate(0deg);
-  }
-  to {
-    opacity: 1;
-    transform: rotate(360deg);
   }
 }
 

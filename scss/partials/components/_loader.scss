@@ -1,0 +1,17 @@
+.loader {
+    opacity: 0;
+    border-top: 10px solid $primary-color;
+    border-bottom: 10px solid $secondary-color;
+    border-left: 10px solid $tertiary-color;
+    border-right: 10px solid $tertiary-color;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: loadingSpinner 2s linear;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

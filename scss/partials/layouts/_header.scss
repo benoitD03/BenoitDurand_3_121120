@@ -1,0 +1,25 @@
+header{
+    text-align: center;
+    position: relative;
+    img {
+        width: 180px;
+        margin: 12px 0;
+    }
+    i {
+        position: absolute;
+        top: 15px;
+        left: 25px;
+        font-size: 1.2em;
+    }
+}
+
+/* MEDIA QUERIES */
+
+@media #{$largeScreen}
+{
+    header {
+        img {
+            width: 220px;
+        }
+    }
+}
