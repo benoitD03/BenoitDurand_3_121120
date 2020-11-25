@@ -140,7 +140,7 @@ a:visited {
 }
 .containerLoc__explore {
   background-color: #F6F6F6;
-  height: 260px;
+  height: 280px;
 }
 .containerLoc__explore h1 {
   text-align: center;
@@ -156,15 +156,16 @@ a:visited {
 .containerLoc__explore button {
   display: block;
   border: none;
-  border-radius: 30px;
-  font-size: 0.95em;
   background: linear-gradient(#FF79DA, #9356DC);
   color: white;
-  box-shadow: 5px 5px 5px #dddddd;
   transition-property: opacity, box-shadow;
-  transition-duration: 1s, 1s;
+  transition-duration: 500ms, 500ms;
+  border-radius: 30px;
+  font-size: 0.95em;
+  box-shadow: 5px 5px 5px #dddddd;
   padding: 20px 20px;
   margin: 30px auto;
+  cursor: pointer;
 }
 .containerLoc__explore button:hover {
   opacity: 0.8;
@@ -184,11 +185,11 @@ a:visited {
   padding-top: 10px;
   border-radius: 20px;
   align-items: center;
-  box-shadow: 5px 5px 5px #dddddd;
+  box-shadow: 3px 3px 10px 3px #dddddd;
 }
 .operation__steps .number {
   position: absolute;
-  top: 24px;
+  top: 30px;
   left: -8px;
   height: 15px;
   padding: 5px 9px;
@@ -228,9 +229,10 @@ a:visited {
   width: 90%;
   height: 245px;
   margin: 20px;
+  margin-bottom: 25px;
   background-color: white;
   border-radius: 20px;
-  box-shadow: 5px 5px 5px #dddddd;
+  box-shadow: 5px 5px 10px #dddddd;
 }
 .thumbnails__image {
   position: relative;
@@ -266,7 +268,7 @@ a:visited {
 }
 .thumbnails__text__icon i {
   position: absolute;
-  right: 15px;
+  right: 22px;
   bottom: 20px;
   font-size: 1.6em;
   opacity: 1;
@@ -277,7 +279,7 @@ a:visited {
 }
 .thumbnails__text__icon2 i {
   position: absolute;
-  right: 15px;
+  right: 22px;
   bottom: 20px;
   font-size: 1.6em;
   opacity: 0;
@@ -311,14 +313,13 @@ a:visited {
   .containerLoc__explore button {
     display: block;
     border: none;
-    border-radius: 40px;
-    font-size: 1.2em;
     background: linear-gradient(#FF79DA, #9356DC);
     color: white;
-    box-shadow: 7px 7px 7px #dddddd;
-    cursor: pointer;
     transition-property: opacity, box-shadow;
     transition-duration: 500ms, 500ms;
+    border-radius: 40px;
+    font-size: 1.2em;
+    box-shadow: 7px 7px 7px #dddddd;
   }
   .containerLoc__explore button:hover {
     opacity: 0.8;
@@ -404,6 +405,7 @@ a:visited {
   background-size: 100% 270px;
   background-repeat: no-repeat;
   background-position-y: 65px;
+  background-image: url("../images/restaurants/le_delice_des_sens.jpg");
 }
 
 /* SECTION 1 */
@@ -414,9 +416,10 @@ a:visited {
   margin-top: 220px;
 }
 .containerMenu__title {
+  position: relative;
   display: flex;
   margin-left: 20px;
-  padding-top: 10px;
+  padding-top: 5px;
 }
 .containerMenu__title h1 {
   font-family: "Shrikhand", sans-serif;
@@ -424,13 +427,15 @@ a:visited {
   margin-bottom: 7px;
 }
 .containerMenu__title i {
-  margin: 30px 0 0 40px;
+  position: absolute;
+  top: 35px;
+  right: 35px;
   font-size: 1.7em;
 }
 .containerMenu__food h2 {
   font-weight: 300;
   font-size: 1em;
-  margin: 0 0 15px 20px;
+  margin: 0 0 20px 20px;
   padding: 25px 0 5px 0;
   border-bottom: 3px solid #99E2D0;
   width: 40px;
@@ -450,15 +455,16 @@ a:visited {
 .containerMenu button {
   display: block;
   border: none;
-  border-radius: 30px;
-  font-size: 0.95em;
   background: linear-gradient(#FF79DA, #9356DC);
   color: white;
-  box-shadow: 5px 5px 5px #dddddd;
   transition-property: opacity, box-shadow;
-  transition-duration: 1s, 1s;
+  transition-duration: 500ms, 500ms;
+  border-radius: 30px;
+  font-size: 0.95em;
+  box-shadow: 5px 5px 5px #dddddd;
   padding: 15px 50px;
   margin: 50px auto;
+  cursor: pointer;
 }
 .containerMenu button:hover {
   opacity: 0.8;
@@ -466,11 +472,12 @@ a:visited {
 }
 
 .thumbnailsMenu {
-  width: 90%;
-  margin: 20px;
+  width: 93%;
+  height: 70px;
+  margin: 12px;
   background-color: white;
   border-radius: 15px;
-  box-shadow: 5px 5px 5px #dddddd;
+  box-shadow: 5px 5px 10px #dddddd;
   display: flex;
   justify-content: space-between;
   opacity: 0;
@@ -482,7 +489,8 @@ a:visited {
 }
 .thumbnailsMenu__title h3 {
   margin: 10px 0 5px 10px;
-  font-size: 1.1em;
+  font-size: 1.2em;
+  font-weight: 400;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -490,7 +498,7 @@ a:visited {
 .thumbnailsMenu__title p {
   margin: 0 0 10px 10px;
   font-weight: 300;
-  font-size: 0.92em;
+  font-size: 0.95em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -551,14 +559,13 @@ a:visited {
   .containerMenu button {
     display: block;
     border: none;
-    border-radius: 40px;
-    font-size: 1.2em;
     background: linear-gradient(#FF79DA, #9356DC);
     color: white;
-    box-shadow: 7px 7px 7px #dddddd;
-    cursor: pointer;
     transition-property: opacity, box-shadow;
     transition-duration: 500ms, 500ms;
+    border-radius: 40px;
+    font-size: 1.2em;
+    box-shadow: 7px 7px 7px #dddddd;
   }
   .containerMenu button:hover {
     opacity: 0.8;
@@ -566,7 +573,7 @@ a:visited {
   }
 
   .containerMenu--entrees .thumbnailsMenu:nth-child(5) {
-    margin-left: 140px;
+    margin-left: 132px;
   }
 }
 @media all and (min-width: 481px) and (max-width: 1169px) {

@@ -1,34 +1,30 @@
+@mixin buttonStyle {
+     display: block;
+     border: none;
+     background: $buttonColor;
+     color: white;
+     transition-property: opacity, box-shadow;
+     transition-duration: 500ms, 500ms;
+    &:hover {
+        opacity: 0.8;
+        box-shadow: 7px 7px 7px darken($backgroundColor, 30);
+    }
+}
+
 @mixin buttonStyleSmall {
-    display: block;
-    border: none;
+    @include buttonStyle();
     border-radius: 30px;
     font-size: 0.95em;
-    background: linear-gradient($secondary-color, $primary-color);
-    color: white;
     box-shadow: 5px 5px 5px darken($backgroundColor, 10);
-    transition-property: opacity, box-shadow;
-    transition-duration: 1s, 1s;
-        &:hover {
-            opacity: 0.8;
-            box-shadow: 7px 7px 7px darken($backgroundColor, 30);
-        }
 }
+
 @mixin buttonStyleLarge {
-    display: block;
-    border: none;
+   @include buttonStyle();
     border-radius: 40px;
     font-size: 1.2em;
-    background: linear-gradient($secondary-color, $primary-color);
-    color: white;
     box-shadow: 7px 7px 7px darken($backgroundColor, 10);
-    cursor: pointer;
-    transition-property: opacity, box-shadow;
-    transition-duration: 500ms, 500ms;
-        &:hover {
-            opacity: 0.8;
-            box-shadow: 7px 7px 7px darken($backgroundColor, 30);
-        }
 }
+
 @mixin backgroundMenu {
     width: 100%;
     height: 270px;
@@ -36,6 +32,7 @@
     background-repeat: no-repeat;
     background-position-y: 65px; 
 }
+
 @mixin imgBackgroundMenu($name) {
     background-image: url("../images/restaurants/#{$name}"); 
 }
