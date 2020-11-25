@@ -171,7 +171,6 @@ a {
             background: $primary-color; 
             background: linear-gradient($primary-color, $secondary-color);  
             -webkit-background-clip: text;
-            background-clip: text;
             -webkit-text-fill-color: transparent;
             &:hover {
                     opacity: 1;
