@@ -3,6 +3,7 @@
      border: none;
      background: $buttonColor;
      color: white;
+     cursor: pointer;
      transition-property: opacity, box-shadow;
      transition-duration: 500ms, 500ms;
     &:hover {
@@ -16,13 +17,17 @@
     border-radius: 30px;
     font-size: 0.95em;
     box-shadow: 5px 5px 5px darken($backgroundColor, 10);
+    padding: 15px 50px;
+    margin: 50px auto;
 }
 
 @mixin buttonStyleLarge {
    @include buttonStyle();
     border-radius: 40px;
-    font-size: 1.2em;
+    font-size: 0.95em;
     box-shadow: 7px 7px 7px darken($backgroundColor, 10);
+    padding: 18px 20px;
+    margin: 30px auto;
 }
 
 @mixin backgroundMenu {

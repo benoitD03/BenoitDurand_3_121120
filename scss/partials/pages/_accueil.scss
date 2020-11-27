@@ -46,10 +46,7 @@ a {
             margin-top: 0;
         }
         button {
-            @include buttonStyleSmall();
-            padding: 20px 20px;
-            margin: 30px auto;
-            cursor: pointer;
+            @include buttonStyleLarge();
         }
     }
 }

@@ -68,9 +68,6 @@
     }
     button {
         @include buttonStyleSmall();
-        padding: 15px 50px;
-        margin: 50px auto;
-        cursor: pointer;
     }
 }
 .thumbnailsMenu{
